@@ -43,7 +43,7 @@ function DemoMeetingTab({ label }: { label: string }) {
   };
   return (
     <div className={styles.tabContent}>
-      <p style={{ marginTop: 0 }}>Try LiveKit Meet for free with our live demo project.</p>
+      <p style={{ marginTop: 0 }}>Try the meeting experience.</p>
       <button className="lk-button" onClick={startMeeting}>
         Start Meeting
       </button>
@@ -61,36 +61,9 @@ function CustomConnectionTab({ label }: { label: string }) {
     router.push(`/custom/?liveKitUrl=${serverUrl}&token=${token}`);
   };
   return (
-    <form className={styles.tabContent} onSubmit={onSubmit}>
-      <p style={{ marginTop: 0 }}>
-        Connect LiveKit Meet with a custom server using LiveKit Cloud or LiveKit Server.
-      </p>
-      <input
-        id="serverUrl"
-        name="serverUrl"
-        type="url"
-        placeholder="LiveKit Server URL: wss://*.livekit.cloud"
-        required
-      />
-      <textarea
-        id="token"
-        name="token"
-        placeholder="Token"
-        required
-        rows={9}
-        style={{ padding: '1px 2px', fontSize: 'inherit', lineHeight: 'inherit' }}
-      />
-      <hr
-        style={{ width: '100%', borderColor: 'rgba(255, 255, 255, 0.15)', marginBlock: '1rem' }}
-      />
-      <button
-        style={{ paddingInline: '1.25rem', width: '100%' }}
-        className="lk-button"
-        type="submit"
-      >
-        Connect
-      </button>
-    </form>
+    <div>
+      <center><h1>Custom Connection</h1></center>
+    </div>
   );
 }
 
@@ -113,17 +86,9 @@ const Home = ({ tabIndex }: InferGetServerSidePropsType<typeof getServerSideProp
     <>
       <main className={styles.main} data-lk-theme="default">
         <div className="header">
-          <img src="/images/livekit-meet-home.svg" alt="LiveKit Meet" width="360" height="45" />
+         <center><h1>Paskaitos</h1></center>
           <h2>
-            Open source video conferencing app built on{' '}
-            <a href="https://github.com/livekit/components-js?ref=meet" rel="noopener">
-              LiveKit&nbsp;Components
-            </a>
-            ,{' '}
-            <a href="https://livekit.io/cloud?ref=meet" rel="noopener">
-              LiveKit&nbsp;Cloud
-            </a>{' '}
-            and Next.js.
+          Welcome to the world of seamless online meetings with Paskaitos—the ultimate SAAS solution for your virtual get-togethers.
           </h2>
         </div>
         <Tabs selectedIndex={tabIndex} onTabSelected={onTabSelected}>
@@ -132,14 +97,11 @@ const Home = ({ tabIndex }: InferGetServerSidePropsType<typeof getServerSideProp
         </Tabs>
       </main>
       <footer data-lk-theme="default">
-        Hosted on{' '}
-        <a href="https://livekit.io/cloud?ref=meet" rel="noopener">
-          LiveKit Cloud
+        Powered by {' '}
+        <a href="https://nexhe.com" rel="noopener">
+          Nexhe
         </a>
-        . Source code on{' '}
-        <a href="https://github.com/livekit/meet?ref=meet" rel="noopener">
-          GitHub
-        </a>
+       
         .
       </footer>
     </>

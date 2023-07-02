@@ -23,8 +23,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>LiveKit Meet</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Paskaitos - Demo</title>
       </Head>
 
       <main data-lk-theme="default">
